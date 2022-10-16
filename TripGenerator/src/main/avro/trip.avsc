@@ -1,0 +1,16 @@
+{"namespace": "org.setnoset",
+  "type": "record",
+  "name": "Trip",
+  "fields": [
+    {"name": "start_time",  "type": "string"},
+    {"name": "deliveries", "type": {"type": "array", "items": {
+        "type": "record",
+        "name": "Delivery",
+        "fields": [
+          {"name": "store", "type": "string"},
+          {"name": "items", "type": {"type": "map", "values": "int"}}
+        ]
+      }}
+    }
+  ]
+}
